@@ -1,0 +1,14 @@
+# Copyright (C) 2024 Wing Hei Chan
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+#+title: Strictly Local Functions Are Simply Typed
+
+[[https://doi.org/10.5281/zenodo.11028353][file:https://zenodo.org/badge/DOI/10.5281/zenodo.11028353.svg]]
+
+This repository holds the manuscript of an unpublished paper.  To
+compile the PDF file, run [[https://www.ctan.org/pkg/light-latex-make][~llmk~]] under an appropriate TeX Live
+environment.

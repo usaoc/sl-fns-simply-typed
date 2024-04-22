@@ -1,5 +1,6 @@
 *
 !.gitignore
+!README*
 !acl_natbib.bst
 !acl.sty
 !impl.ml
