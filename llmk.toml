@@ -1,0 +1,27 @@
+# Copyright (C) 2024 Wing Hei Chan
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+source = "manuscript.tex"
+
+max_repeat = 1
+sequence = ["latex", "bibtex", "latex" "latex"]
+
+extra_clean_files = ["%B.pyg"]
+
+[programs.latex]
+command = "pdflatex"
+opts = [
+  "-shell-escape",
+  "-interaction=nonstopmode",
+  "-file-line-error",
+  "-synctex=1",
+  "-output-directory='%o'"
+]
+
+[programs.bibtex]
+command = "bibtex"
+target = "reference.bib"
