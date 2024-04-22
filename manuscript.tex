@@ -1,7 +1,16 @@
 \pdfoutput=1
+% Copyright (C) 2024 Wing Hei Chan
+
+% This work is licensed under a Creative Commons
+% Attribution-ShareAlike 4.0 International license.  To view a copy of
+% this license, visit
+% <https://creativecommons.org/licenses/by-sa/4.0/>.
+
 \documentclass[11pt]{article}
 
-\usepackage[review]{acl}
+\usepackage{acl}
+\usepackage[type=CC, modifier=by-sa, version=4.0]{doclicense}
+
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -39,10 +48,7 @@
 \newcommand{\hole}{\_}
 \newcommand{\subt}{\mathrel{<\mkern-1.2mu\vcentcolon}}
 
-\newcommand{\comment}[1]{\text{\phantom{(#1)}} \tag{#1}}
-\newcommand{\hide}[1]{%
-  \makebox[0pt][l]{(Intentionally left blank)}%
-  \phantom{#1}}
+\newcommand{\note}[1]{\text{\phantom{(#1)}} \tag{#1}}
 \newcommand{\metab}[1]{\llbracket#1\rrbracket}
 
 \title{Strictly Local Functions Are Simply Typed}
@@ -370,7 +376,7 @@ The step function is a simple one.%
 \begin{align*}
   f(\sigma, \hole) &\coloneq \sigma \\
   f(\acute{\sigma}, \sigma) &\coloneq \acute{\sigma} \\
-  \comment{absent case}
+  \note{absent case}
   f(\acute{\sigma}, \acute{\sigma}) &\coloneq {?}
 \end{align*}
 %
@@ -1074,10 +1080,8 @@ computational interpretations of linguistic theories, and hopes that
 this paper can serve as the first step in the grand scheme.
 
 \section*{Acknowledgements}
-\hide{
 The author thanks Lawrence Cheung for offering the research assistant
 position under which this research was done.
-}
 
 \begin{figure*}
   \centering
@@ -1100,7 +1104,6 @@ let make_lsl2 init step =
 \end{figure*}
 
 \bibliography{reference}
-\bibliographystyle{acl_natbib}
 
 \appendix
 \section{An OCaml Implementation}
@@ -1159,5 +1162,13 @@ let _ =
 They are indeed handled correctly (run the code to see!).  This is
 just a toy example, but it showcases what the implementation should
 generally look like.
+
+\section{Copyright}
+\begin{minipage}[b]{1.0\linewidth}
+  \copyright\ 2024 Wing Hei Chan
+
+  \doclicenseLongText
+  \doclicenseImage
+\end{minipage}
 
 \end{document}
